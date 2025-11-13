@@ -1,6 +1,8 @@
+/* bibliotecas */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 // Estrutura que representa uma sala na mansão (nó da árvore)
 typedef struct Sala {
@@ -132,3 +134,4 @@ int main() {
 
     return 0;
 }
+

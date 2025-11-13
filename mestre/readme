@@ -1,0 +1,96 @@
+O que você vai fazer?
+
+
+A Enigma Studios está finalizando o capítulo mais desafiador de Detective Quest, e escalaram você para um upgrade final: permitir que o jogador colecione pistas, relacione-as a suspeitos e tome uma decisão lógica sobre quem é o culpado.
+
+ 
+
+Sua missão como desenvolvedor(a) técnico(a) é programar o sistema completo que:
+
+ 
+
+Permite explorar uma mansão representada como uma árvore binária.
+ 
+Armazena as pistas encontradas em uma árvore binária de busca. 
+ 
+Associa cada pista a um suspeito usando uma tabela hash.
+ 
+Ao final da exploração, o jogador deve indicar quem é o culpado, e o sistema avaliará, de maneira automática, se há pistas suficientes para sustentar a acusação.
+
+
+Requisitos funcionais
+
+
+Seu programa em C deverá:
+
+ 
+
+Criar uma árvore binária de cômodos, cada um com um nome exclusivo.
+ 
+Ao visitar uma sala, identificar e exibir uma pista específica associada à sala (se existir).
+ 
+Armazenar cada pista coletada em uma árvore BST de forma ordenada.
+ 
+Criar uma tabela hash com as pistas, como chaves, e seus respectivos suspeitos como valores.
+ 
+Permitir ao jogador explorar os cômodos de modo interativo, escolhendo ir para a esquerda (e), direita (d) ou sair (s).
+ 
+Ao final, listar as pistas coletadas e solicitar ao jogador a acusação de um suspeito.
+ 
+Verificar se, pelo menos, duas pistas apontam para o suspeito acusado e exibir a mensagem correspondente ao desfecho.
+ 
+
+Cada cômodo possui:
+
+ 
+
+nome identificador do cômodo.
+ 
+Uma pista estática associada a esse nome, definida por lógica no código.
+
+Requisitos não funcionais
+
+
+Usabilidade: o jogo deve mostrar mensagens informativas sobre cada passo da exploração e as ações finais do julgamento.
+ 
+Legibilidade: o código deve ser bem indentado, com estruturas modulares e nomes representativos.
+ 
+Documentação: comentários explicativos devem existir nas seguintes funções:
+ 
+criarSala() – cria dinamicamente um cômodo.
+ 
+explorarSalas() – navega pela árvore e ativa o sistema de pistas.
+ 
+inserirPista() / adicionarPista() – insere a pista coletada na árvore de pistas.
+ 
+inserirNaHash() – insere associação pista/suspeito na tabela hash.
+ 
+encontrarSuspeito() – consulta o suspeito correspondente a uma pista.
+ 
+verificarSuspeitoFinal() – conduz à fase de julgamento final.
+
+Simplificações para o nível mestre
+
+
+O mapa da mansão é fixo e é montado de forma manual no main().
+ 
+Não há inserção ou remoção dinâmica de salas nem de suspeitos.
+ 
+As pistas associadas a salas são definidas por regras codificadas (sem entrada manual).
+ 
+A exploração termina quando o jogador escolhe sair (s).
+
+Conceitos trabalhados
+
+
+Árvore binária: representa a estrutura de navegação da mansão.
+ 
+Árvore de busca binária (BST): armazena as pistas coletadas em ordem.
+ 
+Tabela hash: associa pistas a suspeitos de forma eficiente.
+ 
+Structs e ponteiros: utiliza alocação dinâmica e manipulação de dados compostos.
+ 
+Recursividade: Exploração da árvore e contagem de pistas por suspeito.
+ 
+Condicionais e loops: Controle da lógica de jogo e verificação de hipóteses.
